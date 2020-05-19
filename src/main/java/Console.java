@@ -1,5 +1,7 @@
 public class Console {
-    void print(String from, String what) {
-        System.out.println("[From " + from + "]: " + what);
+    void print(Chat.Message message) {
+        System.out.print(message.getFrom());
+        System.out.print(" [" + message.getTime() + "]: ");
+        System.out.println(message.getContent());
     }
 }

@@ -1,13 +1,30 @@
+///////////////////////////////////////////////////
+// Best ever chat
+// Copyright (c) 2020 Orachyov Egor
+// Copyright (c) 2020 Osipova Alexandra
+///////////////////////////////////////////////////
+
 syntax = "proto3";
 
+// What to transfer
 message Message {
-    string content = 1;
+    string from = 1;
+    string content = 3;
+    string time = 4;
 }
 
-message Result {
+// Tell who you are o connect to service
+message Connect {
+    string iam = 1;
+}
+
+// Cool hack
+message Void {
     int32 status = 1;
 }
 
-service Chat {
-    rpc send(Message) returns (Result) {}
+// Best ever chat service
+service ChatService {
+    rpc connect(Connect) returns (stream Message) {}
+    rpc send(Message) returns (Void) {}
 }
