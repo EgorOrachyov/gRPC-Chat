@@ -70,4 +70,15 @@ public class ChatClient {
         asyncStub.send(message, resultStreamObserver);
     }
 
+    public void setConsole(Console console) {
+        this.console = console;
+    }
+
+    public String getHost() {
+        return host;
+    }
+
+    public int getPort() {
+        return port;
+    }
 }
