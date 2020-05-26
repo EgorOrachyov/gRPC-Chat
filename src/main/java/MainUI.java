@@ -1,14 +1,12 @@
 import java.io.IOException;
-import java.util.Scanner;
 import java.util.logging.Logger;
 
-public class Main {
+public class MainUI {
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        Logger logger = Logger.getLogger("Main");
+        Logger logger = Logger.getLogger("MainUI");
         ChatServer server;
         ChatClient client;
-        Scanner scanner = new Scanner(System.in);
 
         String whoami;
         String host = "localhost";
@@ -33,19 +31,7 @@ public class Main {
 
         client = new ChatClient(whoami, host, port);
         client.connect();
-
-        boolean stop = false;
-
-        while (!stop) {
-            String text = scanner.nextLine();
-
-            if (text.toLowerCase().equals("$exit")) {
-                stop = true;
-                continue;
-            }
-
-            client.send(text);
-        }
+        new ChatLUI(client);
     }
 
 }
