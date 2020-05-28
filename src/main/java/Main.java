@@ -1,34 +1,37 @@
-import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) {
         Logger logger = Logger.getLogger("Main");
         ChatServer server;
         ChatClient client;
         Scanner scanner = new Scanner(System.in);
+        PrintWriter writer = new PrintWriter(System.out, true);
 
         String whoami;
         String host = "localhost";
         int port;
 
-        if (args.length == 2) {
-            whoami = args[0];
-            port = Integer.valueOf(args[1]);
+        writer.println("Run as server? ");
+        String answer = scanner.next();
+
+        if (answer.toLowerCase().equals("yes")) {
+            writer.println("Enter your name and server port");
+            whoami = scanner.next();
+            port = scanner.nextInt();
             server = new ChatServer(port);
             server.run();
             logger.info("Run as server");
         }
-        else if (args.length == 3) {
-            whoami = args[0];
-            host = args[1];
-            port = Integer.valueOf(args[2]);
-            logger.info("Run as client");
-        }
         else {
-            throw new IOException("Invalid args count");
+            writer.println("Enter your name, server address and port to connect");
+            whoami = scanner.next();
+            host = scanner.next();
+            port = scanner.nextInt();
+            logger.info("Run as client");
         }
 
         client = new ChatClient(whoami, host, port);
