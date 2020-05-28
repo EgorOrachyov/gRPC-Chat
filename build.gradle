@@ -5,6 +5,7 @@ plugins {
     id 'com.google.protobuf' version '0.8.8'
     // Generate IntelliJ IDEA's .idea & .iml project files
     id 'idea'
+    id 'java'
 }
 
 repositories {
@@ -16,6 +17,7 @@ repositories {
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+mainClassName = 'Main'
 
 def grpcVersion = '1.29.0' // CURRENT_GRPC_VERSION
 def protobufVersion = '3.11.0'
@@ -53,5 +55,16 @@ sourceSets {
             srcDirs 'build/generated/source/proto/main/grpc'
             srcDirs 'build/generated/source/proto/main/java'
         }
+    }
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "Main"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     }
 }
