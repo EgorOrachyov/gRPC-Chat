@@ -17,14 +17,14 @@ Example to use from docker
 The project uses Java 12 and Gradle as a building tool. An easiest way to run console 
 application is import this project into Intellij Idea and run java.Main class.
 
-In order to run app from console execute the following command:
+In order to run app from console execute the following command:  
 `./gradlew build && java -jar build/libs/gRPC-Chat.jar`
 
-In order to run docker example execute the following command line instructions:
-`docker run -i -p<port>:<port> char` to run as server, and
+In order to run docker example execute the following command line instructions:  
+`docker run -i -p<port>:<port> char` to run as server  
 `docker run -i char` to run as client.
 
-Docker image could be build as follows: `docker build -t chat .`
+Docker image could be built as follows: `docker build -t chat .`
 
 ## Contributors
 
