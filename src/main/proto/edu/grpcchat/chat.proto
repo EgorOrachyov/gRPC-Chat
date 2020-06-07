@@ -6,6 +6,8 @@
 
 syntax = "proto3";
 
+option java_package = "edu.grpcchat";
+
 // What to transfer
 message Message {
     string from = 1;

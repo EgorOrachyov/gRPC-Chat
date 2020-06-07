@@ -1,3 +1,5 @@
+package edu.grpcchat;
+
 public class Console {
     void print(Chat.Message message) {
         System.out.print(message.getFrom());

@@ -1,3 +1,5 @@
+package edu.grpcchat;
+
 import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -5,7 +7,7 @@ import java.util.logging.Logger;
 public class Main {
 
     public static void main(String[] args) {
-        Logger logger = Logger.getLogger("Main");
+        Logger logger = Logger.getLogger("edu.grpcchat.Main");
         ChatServer server;
         ChatClient client;
         Scanner scanner = new Scanner(System.in);

@@ -1,3 +1,5 @@
+package edu.grpcchat;
+
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
@@ -7,7 +9,7 @@ import java.util.logging.Logger;
 
 public class ChatServer {
 
-    private Logger logger = Logger.getLogger("ChatServer");
+    private Logger logger = Logger.getLogger("edu.grpcchat.ChatServer");
     private int port;
     private Server server;
 

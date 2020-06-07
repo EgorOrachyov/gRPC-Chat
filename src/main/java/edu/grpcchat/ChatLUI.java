@@ -1,3 +1,5 @@
+package edu.grpcchat;
+
 import javax.swing.*;
 import java.awt.*;
 

@@ -1,7 +1,8 @@
+package edu.grpcchat;
+
 import io.grpc.Channel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 

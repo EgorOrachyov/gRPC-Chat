@@ -1,10 +1,12 @@
+package edu.grpcchat;
+
 import java.io.IOException;
 import java.util.logging.Logger;
 
 public class MainUI {
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        Logger logger = Logger.getLogger("MainUI");
+        Logger logger = Logger.getLogger("edu.grpcchat.MainUI");
         ChatServer server;
         ChatClient client;
 

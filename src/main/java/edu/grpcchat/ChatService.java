@@ -1,3 +1,5 @@
+package edu.grpcchat;
+
 import io.grpc.stub.StreamObserver;
 
 import java.util.HashMap;
