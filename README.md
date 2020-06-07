@@ -30,3 +30,8 @@ To run docker example execute the following command line instructions:
 
 * Orachyov Egor - [github](https://github.com/EgorOrachyov)
 * Osipova Alexandra - [github](https://github.com/FemiLame)
+
+## License
+
+This project is licensed under MIT license. License text could be found in 
+[license file](https://github.com/EgorOrachyov/gRPC-Chat/blob/master/LICENSE.md).
