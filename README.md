@@ -36,4 +36,4 @@ To run docker example execute the following command line instructions:
 This project is licensed under MIT license. License text could be found in 
 [license file](https://github.com/EgorOrachyov/gRPC-Chat/blob/master/LICENSE.md).
 
-![Build status](https://travis-ci.org/EgorOrachyov/gRPC-Chat.svg?branch=master)
+[![Build Status](https://travis-ci.org/EgorOrachyov/gRPC-Chat.svg?branch=master)](https://travis-ci.org/EgorOrachyov/gRPC-Chat)
