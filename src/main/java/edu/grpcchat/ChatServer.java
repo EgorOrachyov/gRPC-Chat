@@ -7,6 +7,10 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Run gRPC message service on the server side.
+ * Uses separate thread for the service.
+ */
 public class ChatServer {
 
     private Logger logger = Logger.getLogger("edu.grpcchat.ChatServer");

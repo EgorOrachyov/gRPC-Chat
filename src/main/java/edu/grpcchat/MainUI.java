@@ -3,6 +3,10 @@ package edu.grpcchat;
 import java.io.IOException;
 import java.util.logging.Logger;
 
+/**
+ * Run chat client thought UI.
+ * All the configuration (run as client or server) is done via main args.
+ */
 public class MainUI {
 
     public static void main(String[] args) throws IOException, InterruptedException {

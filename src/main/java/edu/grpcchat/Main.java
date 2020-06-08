@@ -4,6 +4,11 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
+/**
+ * Run p2p chat client in the console mode.
+ * All the configuration (run as client or server) is done through the console UI
+ * (follow the instructions).
+ */
 public class Main {
 
     public static void main(String[] args) {

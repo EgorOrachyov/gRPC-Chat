@@ -6,6 +6,13 @@ import io.grpc.stub.StreamObserver;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * Chat client which could be connected to the chat server for the
+ * p2p message passing.
+ *
+ * This client is run on the both machines,
+ * therefore, all clients have the same interface of the communication.
+ */
 public class ChatClient {
 
     private Console console = new Console();

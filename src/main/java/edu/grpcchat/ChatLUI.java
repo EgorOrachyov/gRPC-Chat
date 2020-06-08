@@ -3,6 +3,9 @@ package edu.grpcchat;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Lightweight UI for chat client.
+ */
 public class ChatLUI extends JFrame {
 
     private int width = 430;

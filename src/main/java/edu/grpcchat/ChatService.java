@@ -6,6 +6,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Optional;
 
+/**
+ * gRPC Service implementation for the message service defined
+ * in the te proto file. Behaves as a simple message broker,
+ * which sends messages from one user to another.
+ * Unique names used as identifiers.
+ *
+ * This service is run on the server side physically.
+ */
 public class ChatService extends ChatServiceGrpc.ChatServiceImplBase {
 
     private HashMap<String,StreamObserver<Chat.Message>> connection = new HashMap<>();
